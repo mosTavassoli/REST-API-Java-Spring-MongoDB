@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>illimity Challenge</title>
+</head>
+
+<body>
+<h1>Register</h1>
+
+
+<form method="POST" th:action="@{/register}" id="customers">
+
+    <label th:id="fiscalcode">fiscalcode: </label>
+    <input required type="text" th:for="fiscalcode" name="fiscalcode"/><br/>
+
+    <label th:id="name">name: </label>
+    <input required type="text" th:for="name" name="name"/><br/>
+
+    <label th:id="surname">surname: </label>
+    <input required type="text" th:for="surname" name="surname"/><br/>
+
+    <label th:id="username">username: </label>
+    <input required type="text" th:for="username" name="username"/><br/>
+
+    <label th:id="password">Password: </label>
+    <input required type="password" name="password"/><br/>
+
+    <label th:id="status">Status: </label>
+    <select required name="status" >
+        <option>ACTIVE</option>
+        <option>EXPIRED</option>
+        <option>BLOCKED</option>
+    </select>
+
+    <br/>
+
+    <label th:id="phoneNumber">PhoneNumber: </label>
+    <input type="text" name="phoneNumber"/><br/>
+
+    <label th:id="email">Email: </label>
+    <input type="email" name="email"/><br/>
+
+    <input type="submit" value="Register"/>
+</form>
+
+</body>
+</html>
